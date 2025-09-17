@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sowmiya P - Portfolio</title>
+  <!-- FontAwesome for skill icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Background Gradient Animation */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(270deg, #6a11cb, #2575fc, #ff758c);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      margin: 0 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav button:hover {
+      color: #ffe259;
+    }
+
+    /* Section Styling */
+    section {
+      display: none;
+      padding: 100px 20px;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    section.active {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2 {
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 700px;
+      backdrop-filter: blur(10px);
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #ffe259;
+    }
+
+    .card a {
+      color: #ffe259;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Skill Bars */
+    .skill-bar {
+      margin: 15px 0;
+    }
+
+    .skill-bar p {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .bar {
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      height: 12px;
+    }
+
+    .fill {
+      background: #ffe259;
+      height: 12px;
+      border-radius: 20px;
+      transition: width 1s ease-in-out;
+    }
+
+    /* Resume Button */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #d859ff;
+      color: black;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #0077ff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home" class="active">
+    <h1>👋 Hi, I'm Sowmiya P</h1>
+    <p>Motivated AI & Data Science undergraduate passionate about applying AI in healthcare, NLP, and image processing.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>👩‍💻 I am an enthusiastic undergraduate student pursuing <strong>B.Tech in Artificial Intelligence and Data Science</strong> at Crescent University, Chennai. With a CGPA of <strong>8.1/10</strong>, I am passionate about using AI and Data Science to create impactful solutions in healthcare, NLP, and image processing.</p>
+
+      <p>✨ Over the past few years, I have gained hands-on experience in <strong>machine learning, generative AI, and data visualization</strong> through academic projects and internships with organizations like <strong>TATA Forage, IBM, and Corizo</strong>. These experiences allowed me to explore AI-driven analytics, web application development, and interactive dashboards.</p>
+
+      <p>🏆 <strong>Certifications & Achievements:</strong></p>
+      <ul>
+        <li>AI & ML Virtual Internship – TATA Forage</li>
+        <li>Data Science Internship – Corizo</li>
+        <li>IBM Internship – Cloud and Web Development</li>
+        <li>Paper Presentation at ICERECT 2025 (Oral Cancer Survival Rate Prediction)</li>
+      </ul>
+
+      <p>🌱 I love working on projects that combine <strong>technology + creativity</strong>, whether it’s building predictive healthcare models, designing AI-powered dashboards, or exploring graph theory in real-world applications.</p>
+
+      <p>🚀 My career goal is to <strong>become a Data Scientist / AI Engineer</strong> in a leading company, where I can leverage AI to solve complex real-world problems and contribute to impactful innovations.</p>
+
+      <a href="Resume 1.pdf" class="resume-btn" target="_blank">📄 Download Resume</a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="card">
+      <h3>💻 Programming</h3>
+      <div class="skill-bar">
+        <p><i class="fab fa-python"></i> Python</p>
+        <div class="bar"><div class="fill" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p><i class="fas fa-database"></i> SQL</p>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p><i class="fab fa-html5"></i> HTML, <i class="fab fa-css3-alt"></i> CSS, <i class="fab fa-js-square"></i> JavaScript</p>
+        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Machine Learning</h3>
+      <div class="skill-bar">
+        <p>Pandas, Numpy, Scikit-learn</p>
+        <div class="bar"><div class="fill" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-bar">
+        <p>TensorFlow, Generative AI</p>
+        <div class="bar"><div class="fill" style="width: 75%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📊 Visualization</h3>
+      <div class="skill-bar">
+        <p>Power BI, Tableau</p>
+        <div class="bar"><div class="fill" style="width: 80%"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🤝 Soft Skills</h3>
+      <p>Communication, Team Collaboration</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects & Internships</h2>
+
+    <div class="card">
+      <h3>🩺 Gallstone Disease Prediction</h3>
+      <p>Developed a machine learning model using Genetic Algorithms + Stacking Ensemble to predict gallstone disease with improved accuracy. Focused on healthcare AI applications.</p>
+      <a href="https://github.com/your-repo-link" target="_blank">🔗 View Project</a>
+    </div>
+
+    <div class="card">
+      <h3>🎥 Netflix-Style Web App (IBM Internship)</h3>
+      <p>Built a responsive web application for movie browsing & recommendations, integrating APIs for real-time content updates.</p>
+    </div>
+
+    <div class="card">
+      <h3>📊 Data Dashboarding (Corizo Internship)</h3>
+      <p>Created interactive dashboards using Power BI & Tableau to visualize business insights effectively.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔗 Graph Theory – Maximum Flow Algorithm</h3>
+      <p>Applied graph algorithms for network optimization problems, showcasing theoretical and practical applications.</p>
+    </div>
+
+    <div class="card">
+      <h3>📈 TATA Forage Internship – AI-powered Analytics</h3>
+      <p>Worked on data preprocessing, model building, and storytelling through insights for real-world business datasets.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:sowmiyapadova0504@gmail.com">sowmiyapadova0504@gmail.com</a></p>
+      <p>Phone: +91 82487 78153</p>
+      <p>GitHub: <a href="https://github.com/SOWMIYA-GOWDA" target="_blank">SOWMIYA-GOWDA</a></p>
+    </div>
+  </section>
+
+  <!-- Script for Section Switching -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
